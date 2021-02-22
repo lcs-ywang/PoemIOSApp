@@ -25,6 +25,8 @@ struct ContentView: View {
                         Section(header:Text("A poem")){
                             Text("\(String(poem[num].title))")
                             Text("\(String(poem[num].content))")
+                            Text("\(String(poem[num].poet.name))")
+
 
                         }
                     }
