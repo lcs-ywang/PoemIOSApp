@@ -11,6 +11,7 @@
 		3C24695125E34CC0007D20BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C24695025E34CC0007D20BE /* ContentView.swift */; };
 		3C24695325E34CC4007D20BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C24695225E34CC4007D20BE /* Assets.xcassets */; };
 		3C24695625E34CC4007D20BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C24695525E34CC4007D20BE /* Preview Assets.xcassets */; };
+		3C24695F25E34EFF007D20BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C24695E25E34EFF007D20BE /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		3C24695225E34CC4007D20BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C24695525E34CC4007D20BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3C24695725E34CC4007D20BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C24695E25E34EFF007D20BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				3C24695225E34CC4007D20BE /* Assets.xcassets */,
 				3C24695725E34CC4007D20BE /* Info.plist */,
 				3C24695425E34CC4007D20BE /* Preview Content */,
+				3C24695E25E34EFF007D20BE /* Constants.swift */,
 			);
 			path = PoemAPI;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				3C24695125E34CC0007D20BE /* ContentView.swift in Sources */,
 				3C24694F25E34CC0007D20BE /* PoemAPIApp.swift in Sources */,
+				3C24695F25E34EFF007D20BE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
