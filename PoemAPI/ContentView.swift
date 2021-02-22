@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var poem:[poemData] = []
+    @State private var poem:[poemData] = [poemData(title: "Loading", content: "Loading", url: "Loading", poet: poetData(name: "Loading", url: "Loading"))]
     @State private var url:String = "https://www.poemist.com/api/v1/randompoems"
     
     var body: some View {
@@ -21,10 +21,8 @@ struct ContentView: View {
                         })
                     }
                     
-                    ForEach(0..<self.poem.count, id:.\self){
-                        Section(header:Text("Poems")){
-                            Text("Hello World")
-                        }
+                    ForEach(0..<self.poem.count, id:\.self){ num in
+                        Text("Text")
                     }
                     
                     
