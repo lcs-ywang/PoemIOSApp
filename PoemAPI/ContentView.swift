@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var poem:String
+    //    @State private var poem:[poemData]
     @State private var url:String = "https://www.poemist.com/api/v1/randompoems"
     
     var body: some View {
@@ -27,6 +27,7 @@ struct ContentView: View {
                 
             }
         }
+        .onAppear(perform: pullData)
         .navigationBarTitle("Poem")
     }
     
@@ -35,25 +36,28 @@ struct ContentView: View {
             return
         }
         
-//        URLSession.shared.dataTask(with: url) { data, response, error in // Getting data to other posts
-//                   if let data = data{
-//                       if let posts = try? JSONDecoder().decode(AllContentPostViewData.self, from: data){ // Data model, data input
-//                           // Update on the main thread
-//                           DispatchQueue.main.async {
-//                               self.posts = posts
-//                               self.sortedImageURL += seperate_image_urls(data: self.posts!.Posts)
-//                               self.sortedPost += seperate_data_from_data(data: self.posts!.Posts)
-//
-//                           }
-//                           print(self.sortedImageURL)
-//                           return
-//                       }
-//                   }
-//               }.resume()
-//        
+        var request = URLRequest(url: url)
+        request.setValue("application/json",
+                         forHTTPHeaderField: "Accept")
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data else{
+                return
+            }
+            
+            print(data)
+            if let poems = try? JSONDecoder().decode([poemData].self, from: data){ // Data model, data input
+                // Update on the main thread
+                print(poems)
+                return
+            }
+        }.resume()
     }
-    
 }
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
