@@ -9,8 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            VStack{
+                Form{
+                    Section(header:Text("Something ")){
+                        Text("Poem")
+                    }
+                    
+                    Section(header:Text("Something Else")){
+                        Text("Button")
+                    }
+                    
+                }
+                
+            }
+        }
+        .navigationBarTitle("Poem")
     }
 }
 
