@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var poem:String
+    @State private var url:String, = "https://www.poemist.com/api/v1/randompoems"
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -26,6 +29,15 @@ struct ContentView: View {
         }
         .navigationBarTitle("Poem")
     }
+    
+    func pullData(){
+        guard let url = URL(string: self.url) else {
+            return
+        }
+        
+        
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
