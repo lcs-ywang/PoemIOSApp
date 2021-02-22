@@ -22,7 +22,11 @@ struct ContentView: View {
                     }
                     
                     ForEach(0..<self.poem.count, id:\.self){ num in
-                        Text("Text")
+                        Section(header:Text("A poem")){
+                            Text("\(String(poem[num].title))")
+                            Text("\(String(poem[num].content))")
+
+                        }
                     }
                     
                     
@@ -49,8 +53,7 @@ struct ContentView: View {
                 return
             }
             
-            if let poems = try? JSONDecoder().decode([poemData].self, from: data){ // Data model, data input
-                // Update on the main thread
+            if let poems = try? JSONDecoder().decode([poemData].self, from: data){
                 self.poem = poems
                 return
             }
